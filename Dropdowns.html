@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdowns</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+
+
+<div class ="container-fluid">
+    <div class="page-header">
+    </div>
+    <div class="jumbotron">
+        <h1>Forms and Dropdowns</h1>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="input-group input-group-lg">
+        <span class="input-group-addon">Your name</span>
+        <input type="text" class="form-control"placeholder="Full Name">
+    </div>
+    <br>
+    <div class="input-group input-group-lg">
+        <input type="text" class="form-control"placeholder="example@example.com">
+        <span class="input-group-btn">
+        <button class="btn btn-default">Email</button>
+        </span>
+    </div>
+    <br>
+    <div class="input-group">
+        <div class="input-group-btn">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Faction<span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Terran</a>
+                <li><a href="#">Protos</a>
+                <li><a href="#">Zerg</a>
+            </ul>
+        </div>
+        <input type="text" class="form-control" aria-label="...">
+    </div>
+</div>
+<br>
+<div class="container-fluid">
+    <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle btn-lg" type="button" id="dropdownMenu1"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">OPTIONS
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-header">Game</li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Save</a></li>
+            <li><a href="#">Load</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header">Settings</li>
+            <li><a href="#">Video</a> </li>
+            <li><a href="#">Audio</a> </li>
+            <li><a href="#">Controls</a> </li>
+        </ul>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <ul class="list-inline">
+            <li><a href="#">Doner</a> </li>
+            <li><a href="#">Kebab</a> </li>
+            <li class = "dropdown">
+                <a href="#" class=" dropdown-toggle" data-toggle="dropdown">Other pages
+                    <span class="caret"></span>
+                    <ul class="dropdown-menu">
+                        <li><a href="Texts.html">Texts</a></li>
+                        <li><a href="Games.html">Games</a></li>
+                        <li><a href="Tables.html">Tables</a></li>
+                    </ul>
+                </a></li>
+        </ul>
+    </div>
+</div>
+
+
+<br>
+<div class="container-fluid">
+    <div class="buttonGoBack">
+        <a href="Main.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a>
+    </div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
