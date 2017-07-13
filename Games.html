@@ -1,0 +1,122 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="Firefox">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <title>Carousel</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+    <style type="text/css">
+        body{
+            font-size: 62.5%;
+            color: white;
+            font-family: arial,sans-serif;
+        }
+        #donerCarousel{
+            width: inherit;
+            height: inherit;
+        }
+        .slide1{
+            background-image: url('https://images4.alphacoders.com/698/thumb-1920-698782.jpg');
+            height: 350px;
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size:cover;
+        }
+        .slide2{
+            background-image: url('https://images3.alphacoders.com/714/thumb-1920-714324.png');
+            height: 350px;
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size:cover;
+        }
+        .slide3{
+            background-image: url('https://images8.alphacoders.com/707/707447.png');
+            height: 350px;
+            background-repeat: no-repeat;
+            background-position:center;
+            background-size:cover;
+        }
+        .carousel-caption h1{
+            font-size: 5.4em;
+            color: #2aabd2;
+            font-family: 'Paprika', cursive;
+            padding-bottom: .4em;
+        }
+        .carousel-caption p{
+            font-size: 2em;
+            color: #2aabd2;
+        }
+        .jumbotron{
+            margin-top: 15px;
+            padding-top: 15px;
+            background-color: lightgrey;
+            color: white;
+            height: 20%;
+        }
+        h3{
+            color:black;
+            text-align: center;
+            font-family: 'Paprika', cursive;
+            font-size: 5.4em;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <div id="donerCarousel" class="carousel slide" data-interval="0" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#donerCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#donerCarousel" data-slide-to="1"></li>
+            <li data-target="#donerCarousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="slide1"></div>
+                <div class="carousel-caption">
+                    <br>
+                    <p><a href="#" class="btn btn-primary btn-sm">Available SOON</a></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="slide2"></div>
+                <div class="carousel-caption">
+                    <br>
+                    <p><a href="#" class="btn btn-primary btn-sm">Available SOON</a></p>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="slide3"></div>
+                <div class="carousel-caption">
+                    <br>
+                    <p><a href="#" class="btn btn-primary btn-sm">Available SOON</a></p>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#donerCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#donerCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>
+    <div class="jumbotron">
+        <h3>Carousel</h3>
+    </div>
+
+    <div class="container">
+        <div class="buttonGoBack">
+            <a href="Main.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a></div>
+    </div>
+</div>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
