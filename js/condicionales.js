@@ -1,4 +1,5 @@
 //If Structure
+
 var hora=12;
 var sayHora = "hora";
 if(hora <= 12){
@@ -11,7 +12,7 @@ if(hora <= 12){
 
 //Switch
 var diaSemana=1
-switch (diaSemana){
+switch (diaSemana) {
     case 1:
         alert("Lunes");
         break;
