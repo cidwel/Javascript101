@@ -15,10 +15,11 @@
             text-align: center;
             font-size: 28px;
         }
-        #secondLine{
+        .container{
             color:#f9f9f9;
             font-size: 20px;
             padding-left: 15px;
+            width: 100%;
             background: #d8e0de;
             background: linear-gradient(135deg, #0b0006 0%,#aebfbc 33%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
             background: -webkit-linear-gradient(-45deg, #2c2c2c 10%,#aebfbc 33%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
@@ -26,32 +27,43 @@
 
         }
     </style>
-
 </head>
 <body>
 
 <div id="app">
     <div id="title" class="container">
         <h1>- JAVASCRIPT - </h1>
+        <section class="col-xs-12 col-sm-12 col-md-12">
+            <div id="secondLine">
+                <br>
+                <h3>Version del navegador</h3>
+                <div id="navVer"></div>
+                <br>
+            </div>
+        </section>
     </div>
     <div class="container-fluid">
         <section class="col-xs-12 col-sm-4 col-md-4">
             <h3>Tabla del 11</h3>
             <button type="button" class="btn btn-default" onclick="writteboard() "id="btnShow">Show table</button>
             <button type="button" class="btn btn-default" onclick="eraseBoard()"id="btnHide">Hide table</button>
-
             <div id="table"></div>
         </section>
         <section class="col-xs-12 col-sm-4 col-md-4">
             <h3>Math </h3>
             <button type="button" class="btn btn-default" onclick="getDiceRoll()" id="rollDice">Roll the dice</button>
             <button type="button" class="btn btn-default" onclick="saveRoll()" id="saveRoll">Save the roll</button>
+            <!--<button type="button" class="btn btn-default" onclick="paintList()" id="paintList">CreateList</button>-->
             <br>
             <diw class="row main">
                 <h3 id="result" style="display: inline"></h3>
-                    /
+                /
                 <h3 id="savedResult"style="display: inline;"></h3>
             </diw>
+            <div class="row">
+                <div id="tableRolls"></div>
+
+            </div>
         </section>
         <section class="col-xs-12 col-sm-4 col-md-4">
             <h3>Strings</h3>
@@ -63,29 +75,41 @@
             </div>
         </section>
     </div>
-    <div class="container-fluid">
-        <section class="col-xs-12 col-sm-12 col-md-12">
-            <div id="secondLine">
-                <br>
-                <h3>Version del navegador</h3>
-                <div id="navVer"></div>
-                <br>
-            </div>
-        </section>
+</div>
+
+<div class="container-fluid">
+    <div class="yankenpo">
+
+
     </div>
+
+
+<div class="main row">
+    <article class="col-xs-12 col-sm-8 col-md-9 col-lg-9">
+        <h1> - Document - </h1>
+
+        <input type="button" value="Change this document" class="btn btn-default" onClick="change()" style="alignment-baseline: center">
+
+    </article>
+
+
+    </input>
+</div>
+
+
     <div class="container-fluid">
         <br>
         <div class="buttonGoBack">
             <a href="Main.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a>
         </div>
     </div>
+
 </div>
-
-
 <script type="text/javascript" src="js/math.js"></script>
 <script type="text/javascript" src="js/repetitivas.js"></script>
 <script type="text/javascript" src="js/navigator.js"></script>
-<script type="text/javascript" src="js/strings.js"></script>
+<script type="text/javascript" src="js/document.js"></script>
+<!--<script type="text/javascript" src="js/strings.js"></script>-->
 
 <!--<script type="text/javascript" src="js/variables.js"></script>-->
 <!--<script type="text/javascript" src="js/condicionales.js"></script>-->

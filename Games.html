@@ -7,35 +7,30 @@
     <meta http-equiv="x-ua-compatible" content="Firefox">
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title>Carousel</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <style type="text/css">
-        body{
-            font-size: 62.5%;
-            color: white;
-            font-family: arial,sans-serif;
-        }
         #donerCarousel{
             width: inherit;
             height: inherit;
         }
         .slide1{
             background-image: url('https://images4.alphacoders.com/698/thumb-1920-698782.jpg');
-            height: 350px;
+            height: 250px;
             background-repeat: no-repeat;
             background-position:center;
             background-size:cover;
         }
         .slide2{
             background-image: url('https://images3.alphacoders.com/714/thumb-1920-714324.png');
-            height: 350px;
+            height: 250px;
             background-repeat: no-repeat;
             background-position:center;
             background-size:cover;
         }
         .slide3{
             background-image: url('https://images8.alphacoders.com/707/707447.png');
-            height: 350px;
+            height: 250px;
             background-repeat: no-repeat;
             background-position:center;
             background-size:cover;
@@ -44,7 +39,7 @@
             font-size: 5.4em;
             color: #2aabd2;
             font-family: 'Paprika', cursive;
-            padding-bottom: .4em;
+            margin-bottom: 10px;
         }
         .carousel-caption p{
             font-size: 2em;
@@ -57,15 +52,43 @@
             color: white;
             height: 20%;
         }
+        .color1{
+            height: 250px;
+            width: 250px;
+            color:white;
+            background:url('res/gamescolbackground.png') center no-repeat;
+            background-size: 100%;
+            margin-right: 5px;
+        }
+        .color1:hover{
+            height: 250px;
+            width: 250px;
+            color:white;
+            margin-right: 5px;
+            background-color:red;
+            opacity: 0.75;
+        }
+        p{
+            padding:10% 10%;
+            text-align: center;
+
+        }
+        footer {
+            background:#16a085;
+            color:#fff;
+        }
         h3{
             color:black;
             text-align: center;
             font-family: 'Paprika', cursive;
-            font-size: 5.4em;
+            font-size: 35px;
         }
     </style>
 </head>
 <body>
+<div class="jumbotron">
+    <h3> - Games - </h3>
+</div>
 <div class="container-fluid">
     <div id="donerCarousel" class="carousel slide" data-interval="0" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -81,7 +104,6 @@
                     <p><a href="#" class="btn btn-primary btn-sm">Available SOON</a></p>
                 </div>
             </div>
-
             <div class="item">
                 <div class="slide2"></div>
                 <div class="carousel-caption">
@@ -89,7 +111,6 @@
                     <p><a href="#" class="btn btn-primary btn-sm">Available SOON</a></p>
                 </div>
             </div>
-
             <div class="item">
                 <div class="slide3"></div>
                 <div class="carousel-caption">
@@ -105,15 +126,46 @@
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
     </div>
-    <div class="jumbotron">
-        <h3>Carousel</h3>
-    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row row-fluid">
+        <div class="color1 col-xs-12 col-sm-6 col-md-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ab qui laudantium dolor, sit doloremque aliquid earum nesciunt vero ullam commodi, blanditiis numquam natus libero repellat odit cum, ipsa nostrum!</p>
+        </div>
 
-    <div class="container">
-        <div class="buttonGoBack">
-            <a href="Main.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a></div>
+        <a href="yankenpo.html">
+            <div class="color1 col-xs-12 col-sm-6 col-md-3">
+
+                <h3 style="color:white; font-size: 25px;">Play YanKenPo</h3>
+            </div>
+        </a>
+        <div class="color1 col-xs-12 col-sm-6 col-md-3">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione ab qui laudantium dolor, sit doloremque aliquid earum nesciunt vero ullam commodi, blanditiis numquam natus libero repellat odit cum, ipsa nostrum!</p>
+        </div>
+        <div class="color1 col-xs-12 col-sm-6 col-md-3">
+
+        </div>
     </div>
 </div>
+<br>
+<br>
+
+
+<div class="container">
+    <div class="buttonGoBack">
+        <a href="Main.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a></div>
+</div>
+
+<footer>
+    <div class="container">
+        <h3>Pie de pagina - Footer</h3>
+        <h4 class="visible-xs">12 Columnas</h4>
+        <h4 class="visible-sm">12 Columnas</h4>
+        <h4 class="visible-md">12 Columnas</h4>
+        <h4 class="visible-lg">12 Columnas</h4>
+    </div>
+</footer>
 <script src="js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

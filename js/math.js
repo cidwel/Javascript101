@@ -6,9 +6,11 @@
 
 document.getElementById('rollDice').addEventListener("click",getDiceRoll);
 document.getElementById('saveRoll').addEventListener("click",saveRoll);
-
+//document.getElementById('paintList').addEventListener("click",paintList);
 var rollResult;
 var savedRollResult;
+//var arrayRolls = [];
+
 
 function getDiceRoll(){
     var random = Math.random();
@@ -22,5 +24,27 @@ function saveRoll(){
     var savedRoll = rollResult;
     document.getElementById('savedResult').innerHTML = savedRoll;
     savedRollResult = savedRoll;
+    //arrayRolls.push(savedRoll);
     return savedRoll;
+
 }
+// function paintList(){
+//
+//     let tabla= '';
+//     tabla += '<table id="tableRoll" border="2" cellspacing="0">';
+//     for (let i = 0; i < arrayRolls.length; i++) {
+//         tabla += "<tr><td>  "+arrayRolls[i] +"</td></tr>";
+//     }
+//     tabla += '</tabla><br>';
+//
+//     document.getElementById('tableRolls').innerHTML = tabla;
+//
+// }
+//
+// function eraseBoard(){
+//
+//     let elemTable = document.getElementById('tableRolls');
+//     elemTable.parentNode.removeChild(elemTable);
+//     return false;
+//
+// }
