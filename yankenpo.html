@@ -6,22 +6,101 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <style>
-    h1{
-        text-align: center;
-    }
+        h1{
+            text-align: center;
+        }
+        .color1{
+            height: 250px;
+            width: 250px;
+            color:white;
+            background:url('res/gamescolbackground.png') center no-repeat;
+            background-size: 100%;
+            margin-right: 5px;
+        }
+        .imageScissors{
+            height: 225px;
+            width: 225px;
+            background:url('res/yankenpo/scissors.png') center no-repeat;
+            opacity: 0.90;
+            background-size: 100%;
+        }
+        .imageScissors:hover{
+            height: 240px;
+            width: 240px;
+            opacity: 1;
+        }
+        .imagePaper{
+            height: 225px;
+            width: 225px;
+            background:url('res/yankenpo/paper.png') center no-repeat;
+            opacity: 0.90;
+            background-size: 100%;
+        }
+        .imagePaper:hover{
+            height: 240px;
+            width: 240px;
+            opacity: 1;
+        }
+        .imageRock{
+            height: 225px;
+            width: 225px;
+            background:url('res/yankenpo/rock.png') center no-repeat;
+            opacity: 0.90;
+            background-size: 100%;
+        }
+        .imageRock:hover{
+            height: 240px;
+            width: 240px;
+            opacity: 1;
+        }
+        p{
+            font-size: 20px;
+            alignment: center;
+        }
     </style>
 
 </head>
 <body>
 
-
 <h1> - THIS IS THE ROCK PAPER SCISSORS GAME - </h1>
 
+<div class="container-fluid">
+    <p> PLAYER WHANTS TO PLAY :
+    <p id="idChoose">
+        Please choose an option to play
+    </p>
+    </p>
+    <p> COMPUTER WANTS TO PLAY :
+    <p id="cpuChoose">
 
+    </p>
 
-<div class=" container-fluid">
-    Please choose an option to play
+    </p>
 </div>
+
+<div class="container-fluid">
+    RESULT FIGHT <p id="resultFight"></p>
+</div>
+2
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="row row-fluid">
+        <div class="color1 col-xs-12 col-sm-6 col-md-3" id="paper" onclick="playerChoose(this)">
+            <div class="imagePaper"></div>
+        </div>
+        <div class="color1 col-xs-12 col-sm-6 col-md-3" id="rock" onclick="playerChoose(this)">
+            <div class="imageRock"></div>
+        </div>
+        <div class="color1 col-xs-12 col-sm-6 col-md-3" id="scissors" onclick="playerChoose(this)">
+            <div class ="imageScissors"></div>
+        </div>
+    </div>
+</div>
+
 
 <div class="container-fluid">
     <br>
