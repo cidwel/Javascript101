@@ -12,10 +12,20 @@
         .color1{
             height: 250px;
             width: 250px;
-            color:white;
             background:url('res/gamescolbackground.png') center no-repeat;
             background-size: 100%;
-            margin-right: 5px;
+            margin: auto;
+            display:block;
+            position:relative;
+        }
+        .color2{
+            height: 250px;
+            width: 250px;
+            background:url('res/enemybackground.png') center no-repeat;
+            background-size: 100%;
+            margin: auto;
+            display:block;
+            position:relative;
         }
         .imageScissors{
             height: 225px;
@@ -23,6 +33,8 @@
             background:url('res/yankenpo/scissors.png') center no-repeat;
             opacity: 0.90;
             background-size: 100%;
+            margin:auto;
+            position:relative;
         }
         .imageScissors:hover{
             height: 240px;
@@ -35,6 +47,8 @@
             background:url('res/yankenpo/paper.png') center no-repeat;
             opacity: 0.90;
             background-size: 100%;
+            margin:auto;
+            position:relative;
         }
         .imagePaper:hover{
             height: 240px;
@@ -47,8 +61,10 @@
             background:url('res/yankenpo/rock.png') center no-repeat;
             opacity: 0.90;
             background-size: 100%;
+            margin:auto;
+            position:relative;
         }
-        .imageRock:hover{
+         .imageRock:hover{
             height: 240px;
             width: 240px;
             opacity: 1;
@@ -58,44 +74,47 @@
             alignment: center;
         }
     </style>
-
 </head>
 <body>
 
 <h1> - THIS IS THE ROCK PAPER SCISSORS GAME - </h1>
 
-<div class="container-fluid">
-    <p> PLAYER WHANTS TO PLAY :
-    <p id="idChoose">
-        Please choose an option to play
-    </p>
-    </p>
-    <p> COMPUTER WANTS TO PLAY :
-    <p id="cpuChoose">
-
-    </p>
-
-    </p>
-</div>
 
 <div class="container-fluid">
     RESULT FIGHT <p id="resultFight"></p>
 </div>
-2
+
+<div class="container container-fluid">
+    <div class="row" id="rowChoices" style="display: block; margin: auto">
+        <div class="col-xs-12 col-sm-9 col-md-4">
+            <div class="color1" style="margin-left: 75%">
+                <div id="playerSelection">
+                    <img src=""/>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-4">
+            <div class="color2" style="margin-left: 75%">
+                <div id="computerSelection">
+                    <img src=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <br>
 <br>
 <br>
 <br>
-<br>
-<div class="container">
-    <div class="row row-fluid">
-        <div class="color1 col-xs-12 col-sm-6 col-md-3" id="paper" onclick="playerChoose(this)">
+<div class="container container-fluid">
+    <div class="row row-fluid" id="rowSelection" >
+        <div class="col-xs-12 col-sm-9 col-md-4" id="paper" onclick="playerChoose(this)"style="background: url('res/marquee.png') center no-repeat; height: 240px;">
             <div class="imagePaper"></div>
         </div>
-        <div class="color1 col-xs-12 col-sm-6 col-md-3" id="rock" onclick="playerChoose(this)">
+        <div class="col-xs-12 col-sm-9 col-md-4" id="rock" onclick="playerChoose(this)"style="background: url('res/marquee.png') center no-repeat; height: 240px;">
             <div class="imageRock"></div>
         </div>
-        <div class="color1 col-xs-12 col-sm-6 col-md-3" id="scissors" onclick="playerChoose(this)">
+        <div class="col-xs-12 col-sm-9 col-md-4" id="scissors" onclick="playerChoose(this)"style="background: url('res/marquee.png') center no-repeat; height: 240px;">
             <div class ="imageScissors"></div>
         </div>
     </div>
@@ -112,5 +131,10 @@
 
 
 <script type="text/javascript" src="js/YanKenPo.js"></script>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

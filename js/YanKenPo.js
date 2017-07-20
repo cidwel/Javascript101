@@ -1,42 +1,64 @@
 
-var p1Choice = "";
-//cpu choose with a math,random() 1~3 both included
-var cpuChoice ="";
+let p1Choice="";
+let cpuChoice="";
+const choices = ['rock', 'paper', 'scissors'];
 
-var paper =1;
-var rock =2;
-var scissors=3;
+function playerChoose(context) {
 
+    p1Choice = context.id;
+    cpuChoose();
+    setImage(p1Choice,cpuChoice);
 
-function playerchoose(){
-
+    return p1Choice;
 }
 
-function resolution() {
-// paper beats rocks
-    if (p1Choice == paper && cpuChoice == rock) {
-        //you win paper wins rock
-    } else if (p1Choice == paper && cpuChoice == scissors) {
-        //you lose scissors wins paper
+function calculateChoices(player, cpu) {
+    // Its much easier to do this by using only integers, i.e 1, 2, 3, and to use a modulo operator. And to apply rock as 1,
+    // paper as 2, and scissors as 3. You subtract x - y (x, being player chosen and y being computer chosen) and take its modulo of 3.
+    // So (x-y) % 3. If == 0 then its a tie. If == 1, player wins. If == 2, computer wins.
+    const p1ChoiceIndex = choices.indexOf(player);
+    const p2ChoiceIndex = choices.indexOf(cpu);
+
+    let resultFight = '';
+    if ((p1ChoiceIndex + 1) % 3 === p2ChoiceIndex) {
+        resultFight = choices[p2ChoiceIndex] + ' Wins';
+    } else if ((p1ChoiceIndex + 2) % 3 === p2ChoiceIndex) {
+        resultFight = choices[p1ChoiceIndex] + ' Wins';
+    } else if (p1ChoiceIndex === p2ChoiceIndex) {
+        resultFight = 'TIE';
     } else {
-        //Tied no one win
+        resultFight = choices[p2ChoiceIndex]  +' Wins';
     }
+    return resultFight;
+}
 
-    if (p1Choice == rock && cpuChoice == scissors) {
-        //you win rock wins scissors
-    }else if(p1Choice == rock && cpuChoice == paper){
-        //you lose paper wins rock
-    }else{
-        //Tied no one win
+function cpuChoose(){
+    // Computer choice
+    const roll = Math.random();
+    cpuChoice = '';
+    if (roll < 0.33) {
+        cpuChoice = "paper";
+    } else if(roll <= 0.67) {
+        cpuChoice = "rock";
+    } else {
+        cpuChoice = "scissors";
     }
+    // Display computer choice
+    const winText = calculateChoices(p1Choice, cpuChoice);
+    document.getElementById('resultFight').innerHTML = winText;
+}
 
-    if (p1Choice == scissors && cpuChoice == paper) {
-        //you win rock wins scissors
-    }else if(p1Choice == scissors && cpuChoice == rock){
-        //you lose paper wins rock
-    }else{
-        //Tied no one win
-    }
+function setImage(playerselection, cpuselection) {
+    const playerimageResource = `./res/yankenpo/${playerselection}.png`;
+    const compimageResource = `./res/yankenpo/${cpuselection}.png`;
+    $('#playerSelection img').attr('src',playerimageResource);
+    $('#computerSelection img').attr('src',compimageResource);
+    explode(explode, 5000);
+}
+
+function explode(){
+
+    $('#rowSelection').show();
 }
 
 
