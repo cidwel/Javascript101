@@ -5,12 +5,6 @@
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/find.recents.xml" />
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/recentProjectDirectories.xml" />
       <change type="DELETED" beforePath="$USER_HOME$/IntelliLang.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/DonerEngine1024B.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/DonerEngine1024W.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/DonerEngine1920B.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/DonerEngine1920W.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/donercarousel.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/donerengine.png" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/_windows/git.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/_windows/keymap.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/_windows/laf.xml" afterPath="" />
@@ -23,12 +17,7 @@
       <change type="DELETED" beforePath="$USER_HOME$/inspection/Default.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/ui.lnf.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/web-browsers.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javascript.html" afterPath="$PROJECT_DIR$/Javascript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/YanKenPo.js" afterPath="$PROJECT_DIR$/js/YanKenPo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/document.js" afterPath="$PROJECT_DIR$/js/document.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/strings.js" afterPath="$PROJECT_DIR$/js/strings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yankenpo.html" afterPath="$PROJECT_DIR$/yankenpo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Games.html" afterPath="$PROJECT_DIR$/Games.html" />
     </list>
     <ignored path="CVME.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Javascript.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Javascript.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Javascript.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="191">
@@ -69,6 +58,16 @@
                 <element signature="n#style#0;n#h3#0;n#diw#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h3#1;n#diw#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Games.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Games.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,12 +122,12 @@
         <option value="$PROJECT_DIR$/js/math.js" />
         <option value="$PROJECT_DIR$/js/repetitivas.js" />
         <option value="$PROJECT_DIR$/Dropdowns.html" />
-        <option value="$PROJECT_DIR$/Games.html" />
         <option value="$PROJECT_DIR$/js/document.js" />
         <option value="$PROJECT_DIR$/js/YanKenPo.js" />
         <option value="$PROJECT_DIR$/yankenpo.html" />
         <option value="$PROJECT_DIR$/Javascript.html" />
         <option value="$PROJECT_DIR$/js/strings.js" />
+        <option value="$PROJECT_DIR$/Games.html" />
       </list>
     </option>
   </component>
@@ -143,8 +142,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="width" value="960" />
-    <option name="height" value="1080" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1092" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -445,7 +446,7 @@
       <workItem from="1500469283157" duration="11234000" />
       <workItem from="1500492014617" duration="7146000" />
       <workItem from="1500551622822" duration="5225000" />
-      <workItem from="1500557228968" duration="72000" />
+      <workItem from="1500557228968" duration="744000" />
     </task>
     <task id="LOCAL-00001" summary="qweqw">
       <created>1499953144890</created>
@@ -465,7 +466,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="140647000" />
+    <option name="totallyTimeSpent" value="141319000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,16 +478,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="960" height="1080" extended-state="1" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1092" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5314534" sideWeight="0.48212352" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2581665" sideWeight="0.48128343" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32869378" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3347548" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32762313" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5314534" sideWeight="0.5178765" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2581665" sideWeight="0.5187166" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -789,13 +790,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Games.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="569">
-          <caret line="153" column="6" selection-start-line="153" selection-start-column="6" selection-end-line="153" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/yankenpo/paper.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -847,6 +841,14 @@
             <element signature="n#style#0;n#h3#0;n#diw#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h3#1;n#diw#0;n#section#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Games.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="37" column="29" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
