@@ -53,13 +53,8 @@ function setImage(playerselection, cpuselection) {
     const compimageResource = `./res/yankenpo/${cpuselection}.png`;
     $('#playerSelection img').attr('src',playerimageResource);
     $('#computerSelection img').attr('src',compimageResource);
-    explode(explode, 5000);
 }
 
-function explode(){
-
-    $('#rowSelection').show();
-}
 
 
 

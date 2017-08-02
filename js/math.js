@@ -4,47 +4,47 @@
  document.write("<h3>El area del circulo es </h3>" + area);
  */
 
-document.getElementById('rollDice').addEventListener("click",getDiceRoll);
-document.getElementById('saveRoll').addEventListener("click",saveRoll);
 //document.getElementById('paintList').addEventListener("click",paintList);
 var rollResult;
 var savedRollResult;
-//var arrayRolls = [];
 
-
-function getDiceRoll(){
-    var random = Math.random();
-    var result = Math.floor(random * (Math.max(201) - Math.min(1)) + Math.min(1));
+function getDiceRoll(min, max){
+    min = 9;
+    max = 20;
+    var result = Math.floor(Math.random() * (max - min )) + min;
     document.getElementById('result').innerHTML = result.toString();
     rollResult = result;
-    return result;
-
 }
+
 function saveRoll(){
     var savedRoll = rollResult;
     document.getElementById('savedResult').innerHTML = savedRoll;
     savedRollResult = savedRoll;
-    //arrayRolls.push(savedRoll);
+    arrayRolls.push(savedRollResult);
     return savedRoll;
-
 }
-// function paintList(){
-//
-//     let tabla= '';
-//     tabla += '<table id="tableRoll" border="2" cellspacing="0">';
-//     for (let i = 0; i < arrayRolls.length; i++) {
-//         tabla += "<tr><td>  "+arrayRolls[i] +"</td></tr>";
-//     }
-//     tabla += '</tabla><br>';
-//
-//     document.getElementById('tableRolls').innerHTML = tabla;
-//
-// }
-//
-// function eraseBoard(){
-//
-//     let elemTable = document.getElementById('tableRolls');
-//     elemTable.parentNode.removeChild(elemTable);
-//     return false;
-//
-// }
+
+function evaluar() {
+    let operation = document.getElementById('numberForEvaluate').value;
+    let result = eval(operation);
+    document.getElementById('evaluateResult').innerHTML = result;
+}
+
+function isNumber() {
+    let input = document.getElementById('numberForCheck').value;
+    if(isNaN(input)){
+        document.getElementById('checkingResult').innerHTML = "It's not a number";
+    }else{
+        document.getElementById('checkingResult').innerHTML = "Its a number";
+    }
+}
+
+function convert() {
+    let input = document.getElementById('numberToConvert').value;
+    if(isNaN(input)){
+        document.getElementById('conversionResult').innerHTML = "Please insert a float number";
+    }else{
+        let parsedInput = parseInt(input);
+        document.getElementById('conversionResult').innerHTML = "Input number " + input + " has been parsed to " + parsedInput;
+    }
+}

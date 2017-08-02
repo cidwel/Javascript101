@@ -12,6 +12,7 @@
 
     <style>
         h1{
+            padding-top: 15px;
             text-align: center;
             font-size: 28px;
         }
@@ -24,7 +25,19 @@
             background: linear-gradient(135deg, #0b0006 0%,#aebfbc 33%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
             background: -webkit-linear-gradient(-45deg, #2c2c2c 10%,#aebfbc 33%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 );
+        }
+        .container2{
+            color:#f9f9f9;
+            font-size: 20px;
+            background-image: url("res/buildingbaner.png");
+            background-size: 100%;
+        }
 
+        canvas{
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            border: 2px solid black;
         }
     </style>
 </head>
@@ -44,30 +57,33 @@
     </div>
     <div class="container-fluid">
         <section class="col-xs-12 col-sm-4 col-md-4">
-            <h3>Tabla del 11</h3>
+            <h2>Tabla del 11</h2>
             <button type="button" class="btn btn-default" onclick="writteboard() "id="btnShow">Show table</button>
             <button type="button" class="btn btn-default" onclick="eraseBoard()"id="btnHide">Hide table</button>
             <div id="table"></div>
         </section>
         <section class="col-xs-12 col-sm-4 col-md-4">
-            <h3>Math </h3>
+            <h2>Math </h2>
             <button type="button" class="btn btn-default" onclick="getDiceRoll()" id="rollDice">Roll the dice</button>
             <button type="button" class="btn btn-default" onclick="saveRoll()" id="saveRoll">Save the roll</button>
-            <!--<button type="button" class="btn btn-default" onclick="paintList()" id="paintList">CreateList</button>-->
+            <button type="button" class="btn btn-default" onclick="paintSavedRolls()" id="paintSavedRolls">Show Saved Rolls</button>
+
             <br>
-            <diw class="row main">
-                <h3 id="result" style="display: inline"></h3>
+            <br>
+            <div class="row main" style="margin:auto;">
+                <h2 id="result" style="display: inline"></h2>
                 /
-                <h3 id="savedResult"style="display: inline;"></h3>
-            </diw>
-            <div class="row">
-                <div id="tableRolls"></div>
+                <h2 id="savedResult"style="display: inline;"></h2>
+                <h3>Saved Rolls</h3>
+                <h3 id="arrayRolls"></h3>
+            </div>
+            <div>
 
             </div>
         </section>
-        <section class="col-xs-12 col-sm-4 col-md-4"">
-            <h3>Strings</h3>
-            <h2 id="resultFrase"></h2>
+        <section class="col-xs-12 col-sm-4 col-md-4">
+            <h2>Strings</h2>
+            <h3 id="resultFrase"></h3>
             <div>
                 Con un total de
                 <h3 id="numLetras"></h3>
@@ -76,26 +92,54 @@
             <input type="text" id="textForTest"/><button class="button" onclick="showMessage()">Checkout</button>
         </section>
     </div>
-</div>
-
-
-
-<div class="container-fluid">
     <br>
-    <div class="buttonGoBack">
-        <a href="Main.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a>
+    <div class="container-fluid">
+        <section class="col-xs-12 col-sm-5 col-md-5">
+            <h3>Lets Talk About Numbers</h3>
+            <div class="row-fluid">
+                <input id="numberForEvaluate"/><button id="evaluate" class="button" name="Evaluate" onclick="evaluar()">Evaluate</button>
+                <h3 id="evaluateResult" style="display: inline; margin-left: 15px;"></h3>
+            </div>
+            <div class="row-fluid">
+                <input id="numberForCheck"/><button id="isNumber" class="button" onclick="isNumber()">Is a number?</button>
+                <h3 id="checkingResult" style="display: inline; margin-left: 15px;"></h3>
+            </div>
+            <div class="row-fluid">
+                <input id="numberToConvert"/><button id="convert" class="button" onclick="convert()">Convert</button>
+                <h3 id="conversionResult" style="display: inline; margin-left: 15px;"></h3>
+            </div>
+        </section>
+    </div>
+    <div class="container-fluid">
+        <section class="col-xs-12 col-sm-6">
+            <canvas id="firstCanvas" width="480" height="480"></canvas>
+            <button type="button" class="btn btn-default" onclick="firstCanvas()" id="paintCanvas">Paint Something into Canvas</button>
+        </section>
+        <section class="col-xs-12 col-sm-12 col-md-6">
+            <section class="container2">
+                <h1> - BUILDING MANAGEMENT - </h1>
+                <a type="button" class="btn btn-default" href="BuildingManager.html" id="manageBuilding" style="display:block; position: relative">Go Manage</a>
+                <br>
+                <br>
+            </section>
+        </section>
+    </div>
+    <br>
+    <div class="container-fluid">
+        <br>
+        <div class="buttonGoBack">
+            <a href="Main.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a>
+        </div>
     </div>
 </div>
 
-</div>
-<script type="text/javascript" src="js/strings.js"></script>
-
+<script type="text/javascript" src="js/canvas.js"></script>
 <script type="text/javascript" src="js/math.js"></script>
+<script type="text/javascript" src="js/Arrays.js"></script>
+<script type="text/javascript" src="js/strings.js"></script>
 <script type="text/javascript" src="js/repetitivas.js"></script>
 <script type="text/javascript" src="js/navigator.js"></script>
-<script type="text/javascript" src="js/document.js"></script>
+<script type="text/javascript" src="js/objetos.js"></script>
 
-<!--<script type="text/javascript" src="js/variables.js"></script>-->
-<!--<script type="text/javascript" src="js/condicionales.js"></script>-->
 </body>
 </html>

@@ -20,4 +20,3 @@ function change(){
     newElement.appendChild(newText);
     para.parentNode.appendChild(newElement);
 }
-*/
