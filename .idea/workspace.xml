@@ -4,15 +4,6 @@
     <list default="true" id="2d7c39ed-02dd-4eee-84f6-5786b2935152" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/find.recents.xml" />
       <change type="NEW" beforePath="" afterPath="$APPLICATION_CONFIG_DIR$/options/recentProjectDirectories.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BuildingManager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/SnakeGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Arrays.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/Buildings.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/canvas.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/games/Snakegame/App.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/games/Snakegame/Draw.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/games/Snakegame/Variables.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/objetos.js" />
       <change type="DELETED" beforePath="$USER_HOME$/IntelliLang.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/_windows/git.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/_windows/keymap.xml" afterPath="" />
@@ -26,15 +17,9 @@
       <change type="DELETED" beforePath="$USER_HOME$/inspection/Default.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/ui.lnf.xml" afterPath="" />
       <change type="DELETED" beforePath="$USER_HOME$/web-browsers.xml" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js/YanKenPo.js" afterPath="$PROJECT_DIR$/js/games/YanKenPo.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Columnas.html" afterPath="$PROJECT_DIR$/Columnas.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Games.html" afterPath="$PROJECT_DIR$/Games.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Javascript.html" afterPath="$PROJECT_DIR$/Javascript.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/document.js" afterPath="$PROJECT_DIR$/js/document.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/math.js" afterPath="$PROJECT_DIR$/js/math.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/strings.js" afterPath="$PROJECT_DIR$/js/strings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yankenpo.html" afterPath="$PROJECT_DIR$/yankenpo.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BuildingManager.html" afterPath="$PROJECT_DIR$/BuildingManager.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Buildings.js" afterPath="$PROJECT_DIR$/js/Buildings.js" />
     </list>
     <ignored path="CVME.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,6 +35,26 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="strings.js" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/js/strings.js">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="170">
+                    <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="CVME" />
@@ -59,8 +64,8 @@
       <file leaf-file-name="BuildingManager.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BuildingManager.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+            <state relative-caret-position="666">
+              <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -71,10 +76,18 @@
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h2#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#4;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#5;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Javascript.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Javascript.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,8 +95,8 @@
       <file leaf-file-name="Buildings.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/Buildings.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+            <state relative-caret-position="557">
+              <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,8 +183,8 @@
         <option value="$PROJECT_DIR$/js/objetos.js" />
         <option value="$PROJECT_DIR$/js/canvas.js" />
         <option value="$PROJECT_DIR$/Javascript.html" />
-        <option value="$PROJECT_DIR$/BuildingManager.html" />
         <option value="$PROJECT_DIR$/js/Buildings.js" />
+        <option value="$PROJECT_DIR$/BuildingManager.html" />
       </list>
     </option>
   </component>
@@ -482,7 +495,7 @@
       <workItem from="1501450045973" duration="5342000" />
       <workItem from="1501587967480" duration="2297000" />
       <workItem from="1501622667640" duration="658000" />
-      <workItem from="1501670254254" duration="2352000" />
+      <workItem from="1501670254254" duration="5245000" />
     </task>
     <task id="LOCAL-00001" summary="qweqw">
       <created>1499953144890</created>
@@ -502,7 +515,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219969000" />
+    <option name="totallyTimeSpent" value="222862000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -688,13 +701,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/strings.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/btnsmall.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -805,17 +811,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Javascript.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="96" column="53" selection-start-line="96" selection-start-column="53" selection-end-line="96" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/objetos.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -835,10 +835,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/strings.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BuildingManager.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+        <state relative-caret-position="666">
+          <caret line="42" column="14" selection-start-line="42" selection-start-column="14" selection-end-line="42" selection-end-column="14" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -849,17 +857,23 @@
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h2#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#4;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#5;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Javascript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="83" column="53" selection-start-line="83" selection-start-column="53" selection-end-line="83" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Buildings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
+        <state relative-caret-position="557">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>

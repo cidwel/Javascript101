@@ -23,11 +23,11 @@ var building ={
 }
 
 var owner={
-    name:'Jorge',
-    floor:6,
-    door:16
+    name:'',
+    floor:'',
+    door:''
 }
-
+var owners = [owner];
 
     function addFloorsandDoors(numFloors, numDoors){
         numFloors=null,
@@ -56,22 +56,34 @@ var owner={
         return postalCode;
     }
 
-    function addOwner(name,floor,door){
-        let owenerName = name;
-        let floor = floor;
-        let door = door;
+    function addOwner(){
+        var ownerName = document.getElementById('newOwnerName').value;
+        var floor = document.getElementById('newOwnerFloor').value;
+        var door = document.getElementById('newOwnerDoor').value;
+        this.owner.name = ownerName;
+        this.owner.floor = floor;
+        this.owner.door = door;
+        document.getElementById('ownerFloor').innerHTML ="In " + owner.floor + " floor ";
+        document.getElementById('ownerDoor').innerHTML = " ,door :" + owner.door;
+        document.getElementById('ownerName').innerHTML = "Lives " + owner.name;
+        owners.push(ownerName,floor,door);
+        console.log(owners);
     }
+
     function showFloors(ownerName, floor){
 
+    }
+    function changeOwnerName() {
+        var newOwnerName = document.getElementById('newOwnerName').value;
+        this.owner.name = newOwnerName.toString;
+        document.getElementById('ownerName').innerHTML = newOwnerName;
     }
 
 document.getElementById('buildingStreet').innerHTML = showStreet();
 document.getElementById('buildingNumber').innerHTML = showNumber();
 document.getElementById('buildingPostalcode').innerHTML = showPostalCode();
 
-document.getElementById('ownerFloor').innerHTML = owner.floor + " ";
-document.getElementById('ownerDoor').innerHTML = " ,door :" + owner.door;
-document.getElementById('ownerName').innerHTML = owner.name;
+
 
 
 
