@@ -16,74 +16,184 @@
  */
 
 
-var building ={
-    street:'Juan Llorens',
-    number:18,
-    postalCode:46008,
+
+//let occupiedClicks = 0;
+
+let owners = [];
+let buildings = [];
+
+
+function modifNumber(newNumber){
+    number = newNumber;
+}
+function modifyStreet(newStreet){
+    street = newStreet;
+}
+function modifyPC(newPC){
+    postalCode = newPC;
 }
 
-var owner={
-    name:'',
-    floor:'',
-    door:''
+function addBuilding(){
+    let street = document.getElementById('street').value;
+    let number = document.getElementById('number').value;
+    let postalCode = document.getElementById('postalCode').value;
+    let floorsAndDoors = addFloorsandDoors();
+    let numFloors = floorsAndDoors.numFloors;
+    let numDoors = floorsAndDoors.numDoors;
+
+    let building={
+        street: street,
+        number: number,
+        postalCode: postalCode,
+        numFloors : numFloors,
+        numDoors: numDoors
+    }
+
+    if(street === ""){
+        cleanTexts();
+        document.getElementById('buildingStreet').innerHTML = "Please I need to know the name of the Street";
+    }
+    else if(number === ""){
+        cleanTexts();
+        document.getElementById('buildingNumber').innerHTML = "Please I need to know the number of the building";
+    }else{
+        if(buildings.find(x => {return x.number === number && x.street === street})){
+            document.getElementById('usedBuildNumber').innerHTML = "That number is already in use";
+        }else{
+            buildings.push(building);
+            buildingsManagement();
+            console.log(buildings);
+            cleanTexts();
+            buildingsRetrieve();
+            showStreet();
+            showNumber();
+            showPostalCode();
+        }
+    }
+
+    function addFloorsandDoors(){
+        let numFloors= document.getElementById('numFloors').value;
+        let numDoors= document.getElementById('numDoors').value;
+        return {
+            numFloors: numFloors,
+            numDoors: numDoors
+        };
+    }
 }
-var owners = [owner];
 
-    function addFloorsandDoors(numFloors, numDoors){
-        numFloors=null,
-        numDoors= null
-    }
-    function modifNumber(newNumber){
-        number = newNumber;
-    }
-    function modifyStreet(newStreet){
-        street = newStreet;
-    }
-    function modifyPC(newPC){
-        postalCode = newPC;
-    }
+function cleanTexts(){
+    document.getElementById('buildingStreet').innerHTML = "";
+    document.getElementById('buildingNumber').innerHTML = "";
+    document.getElementById('buildingPostalcode').innerHTML = "";
+    document.getElementById('usedBuildNumber').innerHTML = "";
+}
+function buildingsManagement() {
+    localStorage.setItem("buildings",JSON.stringify(buildings));
+}
+function buildingsRetrieve() {
+    buildings = JSON.parse(localStorage.getItem("buildings"));
+    document.getElementById('buildingsList').innerHTML = localStorage.getItem("buildings");
+}
 
-    function showStreet(){
-        this.street = building.street;
-        return street;
-    }
-    function showNumber(){
-        this.number = building.number;
-        return number;
-    }
-    function showPostalCode(){
-        this.postalCode = building.postalCode;
-        return postalCode;
-    }
+function hideBuildingList() {
+    document.getElementById('buildingsList').innerHTML = "";
 
-    function addOwner(){
-        var ownerName = document.getElementById('newOwnerName').value;
-        var floor = document.getElementById('newOwnerFloor').value;
-        var door = document.getElementById('newOwnerDoor').value;
-        this.owner.name = ownerName;
-        this.owner.floor = floor;
-        this.owner.door = door;
-        document.getElementById('ownerFloor').innerHTML ="In " + owner.floor + " floor ";
-        document.getElementById('ownerDoor').innerHTML = " ,door :" + owner.door;
-        document.getElementById('ownerName').innerHTML = "Lives " + owner.name;
-        owners.push(ownerName,floor,door);
-        console.log(owners);
-    }
+}
 
-    function showFloors(ownerName, floor){
+function showStreet(){
+    buildings.find(x => x.street === street);
+    document.getElementById('buildingStreet').innerHTML = "New building deployed in street : "+street.value;
 
-    }
-    function changeOwnerName() {
-        var newOwnerName = document.getElementById('newOwnerName').value;
-        this.owner.name = newOwnerName.toString;
-        document.getElementById('ownerName').innerHTML = newOwnerName;
+}
+function showNumber(){
+    buildings.find(x => x.number === number);
+    document.getElementById('buildingNumber').innerHTML = "Number : "+number.value;
+}
+function showPostalCode(){
+    buildings.find(x => x.postalCode === postalCode);
+    document.getElementById('buildingPostalcode').innerHTML = "PC : "+postalCode.value;
+
+}
+
+function addOwner(){
+    let ownerName = document.getElementById('newOwnerName').value;
+    let floor = document.getElementById('newOwnerFloor').value;
+    let door = document.getElementById('newOwnerDoor').value;
+
+    let owner={
+        name: ownerName,
+        floor: floor,
+        door: door
     }
 
-document.getElementById('buildingStreet').innerHTML = showStreet();
-document.getElementById('buildingNumber').innerHTML = showNumber();
-document.getElementById('buildingPostalcode').innerHTML = showPostalCode();
+    //find just return one object that matches the conditions
+    //filter will return an array of objects that matches the conditions
+    //arrow function or anonymous function
+    if(ownerName === ""){
+        document.getElementById('ownerName').innerHTML = "Please fill the form to continue";
+    }else{
+        if (owners.find(x => x.door === door)) {
+            document.getElementById('isOccupied').innerHTML ="this apartment is already occupied";
+            /*   let iToldYouToStop = document.querySelector('#isOccupied');
+             occupiedClicks++;
+             if(occupiedClicks == 2){
+             iToldYouToStop.innerHTML = '<h4>' + iToldYouToStop.innerHTML + '</h4>';
+             }
+             if(occupiedClicks == 4){
+             document.getElementById('isOccupied').innerHTML ="this apartment is already OCCUPIED";
+             iToldYouToStop.innerHTML = '<h3>' + iToldYouToStop.innerHTML + '</h3>';
+             }
+             if(occupiedClicks == 6){
+             document.getElementById('isOccupied').innerHTML ="PLEASE STOP";
 
+             iToldYouToStop.innerHTML = '<h2>' + iToldYouToStop.innerHTML + '</h2>';
+             }
+             if(occupiedClicks == 8){
+             document.getElementById('isOccupied').innerHTML ="OK FUCK THIS I TRIED";
 
+             iToldYouToStop.innerHTML = '<h1>' + iToldYouToStop.innerHTML + '</h1>';
+             }
+             if(occupiedClicks == 30){
+             document.getElementById('isOccupied').innerHTML ="You dont know when to stop right?";
 
+             iToldYouToStop.innerHTML = '<h1>' + iToldYouToStop.innerHTML + '</h1>';
+             }
+             if(occupiedClicks == 45){
+             document.getElementById('isOccupied').innerHTML ="Achivement Unlocked! Is that what you want to read? OK you are a nice Clicker ";
 
+             iToldYouToStop.innerHTML = '<h1>' + iToldYouToStop.innerHTML + '</h1>';
+             }
+             if(occupiedClicks == 65){
+             document.getElementById('isOccupied').innerHTML ="Do you realise that you are wasting your time? This is not how you want to live. ";
 
+             iToldYouToStop.innerHTML = '<h1>' + iToldYouToStop.innerHTML + '</h1>';
+             }*/
+        }else{
+            owners.push(owner);
+            ownersManagement();
+            console.log(owners);
+            document.getElementById('isOccupied').innerHTML ="";
+            document.getElementById('ownerName').innerHTML = "";
+        }
+    }
+}
+
+function ownersManagement(){
+    localStorage.setItem("owners",JSON.stringify(owners));
+}
+function ownersRetrieve() {
+    owners = JSON.parse(localStorage.getItem("owners"));
+    document.getElementById('ownersList').innerHTML = localStorage.getItem("owners");
+}
+function hideOwnersList() {
+    document.getElementById('ownersList').innerHTML = "";
+}
+
+function showFloors(ownerName, floor){
+
+}
+
+/*LA OTRA MANERA
+ if (owners.find(x => { return x.door === door && x.name === ownerName})) {
+
+ */
