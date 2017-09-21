@@ -1,10 +1,3 @@
-//Calculate the radio of a circle
-/*var radio = prompt("Insert the radio of the circle");
- var area=2*Math.PI*radio;
- document.write("<h3>El area del circulo es </h3>" + area);
- */
-
-//document.getElementById('paintList').addEventListener("click",paintList);
 var rollResult;
 var savedRollResult;
 

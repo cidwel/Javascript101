@@ -26,15 +26,25 @@
             background: -webkit-linear-gradient(-45deg, #2c2c2c 10%,#aebfbc 33%,#99afab 33%,#8ea6a2 50%,#829d98 67%,#4e5c5a 82%,#0e0e0e 100%);
             filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', endColorstr='#0e0e0e',GradientType=1 );
         }
-        .container2{
+        .containerBuilding{
             color:#f9f9f9;
             font-size: 20px;
-            background-image: url("res/buildingbaner.png");
-            background-size: 100%;
+            width: 75%;
+            height: 100%;
+            background-image: url("res/buildingbanersmall.png");
+            background-size: 50%;
+        }
+        .containerEvents{
+            color:#f9f9f9;
+            font-size: 20px;
+            width: 75%;
+            height: 100%;
+            background-image: url("res/eventbanersmall.png");
+            background-size: 50%;
         }
 
         canvas{
-            display: block;
+            /*display: block;*/
             margin-top: 15px;
             margin-bottom: 15px;
             border: 2px solid black;
@@ -67,7 +77,6 @@
             <button type="button" class="btn btn-default" onclick="getDiceRoll()" id="rollDice">Roll the dice</button>
             <button type="button" class="btn btn-default" onclick="saveRoll()" id="saveRoll">Save the roll</button>
             <button type="button" class="btn btn-default" onclick="paintSavedRolls()" id="paintSavedRolls">Show Saved Rolls</button>
-
             <br>
             <br>
             <div class="row main" style="margin:auto;">
@@ -78,7 +87,6 @@
                 <h3 id="arrayRolls"></h3>
             </div>
             <div>
-
             </div>
         </section>
         <section class="col-xs-12 col-sm-4 col-md-4">
@@ -111,16 +119,27 @@
         </section>
     </div>
     <div class="container-fluid">
-        <section class="col-xs-12 col-sm-6">
-            <canvas id="firstCanvas" width="480" height="480"></canvas>
+        <section class="col-xs-12 col-sm-9 col-md-6">
+            <canvas id="firstCanvas" width="460" height="460"></canvas>
+            <br>
             <button type="button" class="btn btn-default" onclick="firstCanvas()" id="paintCanvas">Paint Something into Canvas</button>
         </section>
         <section class="col-xs-12 col-sm-12 col-md-6">
-            <section class="container2">
-                <h1> - BUILDING MANAGEMENT - </h1>
+            <section class="containerBuilding">
+                <h1>- BUILDING MANAGEMENT -</h1>
                 <a type="button" class="btn btn-default" href="BuildingManager.html" id="manageBuilding" style="display:block; position: relative">Go Manage</a>
-                <br>
-                <br>
+            </section>
+        </section>
+        <section class="col-xs-12 col-sm-12 col-md-6">
+            <section class="containerEvents">
+                <h1> - EVENT MANAGEMENT -</h1>
+                <a type="button" class="btn btn-default" href="EventManager.html" id="manageEvents" style="display:block; position: relative">Go Manage</a>
+            </section>
+        </section>
+        <section class="col-xs-12 col-sm-12 col-md-6">
+            <section class="containerEvents">
+                <h1> - AJAX MANAGEMENT -</h1>
+                <a type="button" class="btn btn-default" href="Ajax.html" id="manageAjax" style="display:block; position: relative">Go Manage</a>
             </section>
         </section>
     </div>
@@ -140,6 +159,7 @@
 <script type="text/javascript" src="js/repetitivas.js"></script>
 <script type="text/javascript" src="js/navigator.js"></script>
 <script type="text/javascript" src="js/objetos.js"></script>
+<script type="text/javascript" src="js/DomAndEvents.js"></script>
 
 </body>
 </html>

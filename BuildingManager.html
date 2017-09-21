@@ -42,6 +42,37 @@
         <h3 id="buildingsList"></h3>
     </div>
 </div>
+<div class="container-fluid" style="margin:25px">
+    <div class="col-xs-12 col-sm-8 col-md-6">
+        <h3>Modify Street Name</h3>
+        <div class="row-fluid">
+            <input type="text" id="oldName" placeholder="Street To be modified">
+            <h5 style="display: inline" id="unUsedStreet"></h5>
+        </div>
+        <input type="text" id="newName" placeholder="New Street"><br>
+
+        <button class="btn button" onclick="modifyStreet()">Modify Street</button>
+        <h3>Modify Number</h3>
+        <div class="row-fluid">
+            <input type="text" id="oldNumber" placeholder="Number To modify">
+            <h5 style="display: inline" id="unUsedNumber"></h5>
+        </div>
+        <input type="text" id="newNumber" placeholder="New Number"><br>
+
+        <button class="btn button" onclick="modifyNumber()">Modify Number</button>
+        <br><h3>Modify Postal Code</h3>
+        <div class="row-fluid">
+            <input style="display:inline" type="text" id="oldPc" placeholder="Postal Code to modify"><br>
+            <h5 style="display: inline" id="unUsedPC"></h5>
+        </div>
+        <input type="text" id="newPc" placeholder="New Postal Code"><br>
+
+        <button class="btn button" onclick="modifyPC()">Modify PC</button>
+
+    </div>
+
+</div>
+
 
 <div class="container-fluid" style="margin:25px">
     <div class="col-xs-12 col-sm-8 col-md-4">

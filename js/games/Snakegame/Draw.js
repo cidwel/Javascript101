@@ -15,10 +15,10 @@ let drawModule = (function(){
     let scoreText = function (){
         let score_text = "Score " + score;
         ctx.fillStyle = 'blue';
-        ctx.fillText(score_text,145,h-5);
+        ctx.fillText(score_text,145, 10);
     }
     let drawSnake = function(){
-        let length = 4;
+        let length = 5;
         snake = [];
         for(let i = length -1; i>=0; i--){
             snake.push({x:i,y:0});
@@ -34,16 +34,17 @@ let drawModule = (function(){
             let snakeY = snake[i].y;
 
             if(food.x === snakeX && food.y === snakeY || food.y === snakeY && food.x === snakeX){
-                food.x = Math.floor((Math.random() *40) + 1);
-                food.y = Math.floor((Math.random() *40) + 1);
+                food.x = Math.floor((Math.random() *35) + 1);
+                food.y = Math.floor((Math.random() *35) + 1);
             }
         }
     }
     let paint = function () {
-        ctx.fillStyle = 'black';
-        ctx.fillRect(0, 0, w, h);
-        ctx.fillStyle = 'darkgray';
-        ctx.fillRect(0, 0, w, h);
+        let base_image = new Image();
+        base_image.src = 'res/enemybackground.png';
+        ctx.backgroundImage = base_image;
+        ctx.fillRect(0,0,w,h);
+
 
         btnStart.setAttribute('disabled', false);
 
@@ -97,15 +98,19 @@ let drawModule = (function(){
         for(let i=0;i<array.length; i++){
             if(array[i].x === x && array[i].y === y){
                 return true;
+                console.log("doner - true");
+            }else{
+                console.log("doner - false");
+
+                return false;
             }
-            return false;
         }
     }
     let init = function () {
         direction = 'down';
         drawSnake();
         createFood();
-        gameloop = setInterval(paint, 80);
+        gameloop = setInterval(paint, 60);
     }
 
     return{
