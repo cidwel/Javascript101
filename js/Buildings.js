@@ -18,7 +18,6 @@
 //let occupiedClicks = 0;
 
 var owners = [];
-var buildings = [];
 
 function addBuilding(){
     let street = document.getElementById('street').value;
@@ -29,7 +28,7 @@ function addBuilding(){
     let numFloors = floorsAndDoors.numFloors;
     let numDoors = floorsAndDoors.numDoors;
 
-    var building={
+    var building = {
         street: street,
         number: number,
         postalCode: postalCode,
@@ -38,30 +37,18 @@ function addBuilding(){
     }
 
     if(street === ""){
-        cleanTexts();
         document.getElementById('buildingStreet').innerHTML = "Please I need to know the name of the Street";
-    }
-    else if(number === ""){
-        cleanTexts();
+    }else if(number === ""){
         document.getElementById('buildingNumber').innerHTML = "Please I need to know the number of the building";
     }else{
-        if(buildings.find(x => {return x.number === number && x.street === street})){
-            document.getElementById('usedBuildNumber').innerHTML = "That number is already in use";
-        }else{
-            buildings.push(building);
-            buildingsManagement();
-            console.log(buildings.length + " buildings into the array");
-            cleanTexts();
-            buildingsRetrieve();
-            showStreet();
-            showNumber();
-            showPostalCode();
-        }
+        cleanTexts();
+        insertBuildingIntoDb(building);
+
     }
 
     function addFloorsandDoors(){
-        let numFloors= document.getElementById('numFloors').value;
-        let numDoors= document.getElementById('numDoors').value;
+        var numFloors= document.getElementById('numFloors').value;
+        var numDoors= document.getElementById('numDoors').value;
         return {
             numFloors: numFloors,
             numDoors: numDoors
@@ -69,6 +56,25 @@ function addBuilding(){
     }
     return building;
 }
+
+function insertBuildingIntoDb(building){
+    $.ajax({
+        type:"POST",
+        url: "php/addBuilding.php",
+        data: building,
+        success: ((response) => {
+            if (response === 'Building submited succesfully') {
+                console.log('Registro añadido');
+            } else {
+                console.log('Algo ha ido mal ' + response);
+            }
+        }),
+        error: ((response) => {
+            console.log('Database Error' + response);
+        })
+    });
+}
+
 function cleanTexts(){
     document.getElementById('buildingStreet').innerHTML = "";
     document.getElementById('buildingNumber').innerHTML = "";
@@ -79,14 +85,29 @@ function cleanTexts(){
     document.getElementById("unUsedNumber").innerHTML = "";
     document.getElementById('isOccupied').innerHTML ="";
     document.getElementById('ownerName').innerHTML = "";
+}
 
-}
-function buildingsManagement() {
-    localStorage.setItem("buildings",JSON.stringify(buildings));
-}
-function buildingsRetrieve() {
-    buildings = JSON.parse(localStorage.getItem("buildings"));
-    document.getElementById('buildingsList').innerHTML = localStorage.getItem("buildings");
+// function buildingsManagement() {
+//     localStorage.setItem("buildings",JSON.stringify(buildings));
+//
+//
+// }
+
+function buildingsRetrieve(buildings) {
+    $.ajax({
+        type:"POST",
+        url: "php/retrieveBuildings.php",
+        data: buildings,
+        dataType: 'text',
+        success: ((data) => {
+                document.getElementById('buildingsList').innerHTML = data;
+
+        }),
+        error: ((data) => {
+            console.log('Database Error' + data);
+        })
+    });
+
 }
 function hideBuildingList() {
     document.getElementById('buildingsList').innerHTML = "";
@@ -234,20 +255,20 @@ function addOwner(){
 function ownersManagement(){
     localStorage.setItem("owners",JSON.stringify(owners));
 }
+
 function ownersRetrieve() {
     owners = JSON.parse(localStorage.getItem("owners"));
     document.getElementById('ownersList').innerHTML = localStorage.getItem("owners");
 }
+
 function hideOwnersList() {
     document.getElementById('ownersList').innerHTML = "";
 }
 
- // mostrarPlantas(): Método que permitirá mostrar todos los propietarios de cada puerta del edificio.
+// mostrarPlantas(): Método que permitirá mostrar todos los propietarios de cada puerta del edificio.
 
 function showFloors(buildingStreet, ownerName){
     buildings.find(x => x.street === buildingStreet);
-
-
 }
 
 /*LA OTRA MANERA

@@ -5,16 +5,53 @@
     <title>Character Selection</title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+
+    <style>
+
+        #backgroundSelection{
+            background-image: url("res/backgrounds/background.jpg");
+            height: 100vh; /* For 100% screen height */
+            width:  100vw; /* For 100% screen width */
+        }
+
+
+
+        #characterSelection {
+            /*ADD MARGIN TO CHARACTER*/
+            margin-top: 10%;
+            margin-left: 23%;
+        }
+
+        #characterName{
+            font-size: 35px;
+            margin-top: 5%;
+            margin-left: 23%;
+        }
+
+        .characterSelector td {
+            background-image: url("res/characters/marquee.png");
+            width: 256px;
+            margin: 50px;
+            height: 256px;
+        }
+
+        .characterSelector img {
+            width: 256px;
+            padding: 10px;
+            height: 256px;
+        }
+    </style>
+
 </head>
+
+
+
 <body>
-<div class="container-fluid">
-    <br>
-    <canvas id="screen"></canvas>
-    <div class="container container-fluid">
-        <div class="row row-fluid" id="characterSelection">
 
-        </div>
-
+<div id="hero" class="container-fluid" style="background: black">
+    <div class="container" id="backgroundSelection">
+        <div class="row row-fluid" id="characterSelection"></div>
+        <div class="characterName" id="characterName"></div>
     </div>
 
 
@@ -25,5 +62,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/games/selectCharacter.js"></script>
 </body>
 </html>

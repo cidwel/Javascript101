@@ -7,15 +7,15 @@ $postalCode = $_POST['postalCode'];
 $numFloors = $_POST['numFloors'];
 $numDoors = $_POST['numDoors'];
 
-$connection = mysql_connect("localhost","root","");
-$db = mysql_select_db("buildingsdb");
+$connection = mysqli_connect("localhost","root","");
+mysqli_set_charset($connection,"utf8");
+$db = mysqli_select_db($connection,"buildingsdb");
 if(isset($street)){
-$result = mysql_query("insert into building (street, num, postalcode, numFloors, numDoors) VALUES ('$street',$number,$postalCode,$numFloors,$numDoors)");
-if (!$result) {
-    die('Could not enter data: ' . mysql_error());
+    $result = mysqli_query($connection,"insert into building (street, num, postalcode, numFloors, numDoors) VALUES ('$street','$number','$postalCode','$numFloors','$numDoors')");
+    if (!$result) {
+        die('Could not enter data: ' . mysqli_error());
+    }
+    echo "Building submited succesfully";
 }
-
-echo "Building submited succesfully";
-}
-mysql_close($connection);
+mysqli_close($connection);
 

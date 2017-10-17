@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+
 <div class="container-fluid" style="margin:25px">
     <div class="col-xs-12 col-sm-8 col-md-4">
         <div class="row-fluid">
@@ -19,7 +20,9 @@
         <div class="row-fluid">
             <input type="text" id="number" placeholder="Number"/>
             <h5 style="display: inline" id="usedBuildNumber"></h5>
-
+        </div>
+        <div class="row-fluid">
+            <input style="display: inline" type="text" id="postalCode" placeholder="Postal Code"/>
         </div>
         <div class="row-fluid">
             <input type="text" id="numFloors" placeholder="How many Floors?"/>
@@ -27,9 +30,7 @@
         <div class="row-fluid">
             <input type="text" id="numDoors" placeholder="How many Doors?"/>
         </div>
-        <div class="row-fluid">
-            <input style="display: inline" type="text" id="postalCode" placeholder="Postal Code"/>
-        </div>
+
         <button class="btn button" onclick="addBuilding()">Add new Building</button>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-6">
@@ -50,7 +51,6 @@
             <h5 style="display: inline" id="unUsedStreet"></h5>
         </div>
         <input type="text" id="newName" placeholder="New Street"><br>
-
         <button class="btn button" onclick="modifyStreet()">Modify Street</button>
         <h3>Modify Number</h3>
         <div class="row-fluid">
@@ -58,7 +58,6 @@
             <h5 style="display: inline" id="unUsedNumber"></h5>
         </div>
         <input type="text" id="newNumber" placeholder="New Number"><br>
-
         <button class="btn button" onclick="modifyNumber()">Modify Number</button>
         <br><h3>Modify Postal Code</h3>
         <div class="row-fluid">
@@ -68,12 +67,8 @@
         <input type="text" id="newPc" placeholder="New Postal Code"><br>
 
         <button class="btn button" onclick="modifyPC()">Modify PC</button>
-
     </div>
-
 </div>
-
-
 <div class="container-fluid" style="margin:25px">
     <div class="col-xs-12 col-sm-8 col-md-4">
         <div class="row-fluid">
@@ -101,14 +96,10 @@
         <h3 id="ownersList"></h3>
     </div>
 </div>
-
-
 <div class="buttonGoBack">
     <a href="Javascript.html" class="btn btn-default"><span class="glyphicon glyphicon-triangle-left"></span> Go Back</a>
 </div>
 
-
 <script type="text/javascript" src="js/Buildings.js"></script>
-
 </body>
 </html>
