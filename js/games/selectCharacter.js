@@ -16,6 +16,13 @@ arrActors[1][1] =  {id: 6, name: 'Kindows3.1'};
 arrActors[1][2] =  {id: 7, name: 'Dr Kidwel'};
 arrActors[1][3] =  {id: 8, name: 'Kindows Original'};
 
+champions = [];
+arrActors.forEach(row => {
+    row.forEach(champ  => {
+        champions.push(champ);
+    });
+})
+
 const totalRows = 2;
 const totalCols = 4;
 let activeActor = 1;
@@ -42,6 +49,7 @@ content += '</table>';
 setContent('characterSelection',content);
 
 function setActiveActor(index) {
+    debugger
     activeActor = index;
     let urlMarquee = "res/characters/p1marquee.png";
     const $selectedActorCell = $(`.characterSelector td[actorId="${index}"]`);
@@ -52,26 +60,7 @@ function setActiveActor(index) {
 setActiveActor(1);
 
 function setActorName() {
-    let id= 1;
-
-    if(id == activeActor){
-        console.log(activeActor)
-        setContent('characterName', "Takuma");
-    }else if(activeActor == 2){
-        setContent('characterName', "Kortes");
-    }else if(activeActor == 3){
-        setContent('characterName', "Kiddy")
-    }else if(activeActor == 4){
-        setContent('characterName', "Kebab");
-    }else if(activeActor == 5){
-        setContent('characterName', "Kim Kalpert");
-    }else if(activeActor == 6){
-        setContent('characterName', "Kindows3.1");
-    }else if(activeActor == 7){
-        setContent('characterName', "Dr Kidwalstruffen");
-    }else if(activeActor == 8){
-        setContent('characterName', "Kindows Original");
-    }
+    setContent('characterName', champions.find(x => x.id === activeActor).name)
 }
 
 function disableActiveActor() {
